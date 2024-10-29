@@ -1,7 +1,7 @@
 # Access Azure OpenAI Service
-  Provision an Azure OpenAI resource in your Azure subscription.
-  Create an Azure OpenAI Service resource in the Azure portal
-  Create an Azure OpenAI Service resource in Azure CLI
+  <ui><li>Provision an Azure OpenAI resource in your Azure subscription.</li>
+  <li>Create an Azure OpenAI Service resource in the Azure portal</li>
+  <li>Create an Azure OpenAI Service resource in Azure CLI</li>
     az cognitiveservices account create \
         -n MyOpenAIResource \
         -g OAIResourceGroup \
