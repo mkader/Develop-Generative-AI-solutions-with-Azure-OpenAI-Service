@@ -1,4 +1,4 @@
-#Access Azure OpenAI Service
+# Access Azure OpenAI Service
   Provision an Azure OpenAI resource in your Azure subscription.
   Create an Azure OpenAI Service resource in the Azure portal
   Create an Azure OpenAI Service resource in Azure CLI
@@ -10,4 +10,4 @@
         --sku s0 \
         --subscription subscriptionID
 
-#Use Azure AI Studio
+# Use Azure AI Studio
