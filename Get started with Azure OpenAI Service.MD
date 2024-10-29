@@ -41,13 +41,46 @@
 | Picking up where you left off | One way to grow tomatoes | is to plant seeds. |
 | Giving factual responses | How many moons does Earth have? | One |
 
-Completion quality
-Several factors affect the quality of completions you'll get from a generative AI solution.
+## Test models in Azure AI Studio's playground
+* Playgrounds are useful interfaces in Azure AI Studio that you can use to experiment with your deployed models without needing to develop your own client application. 
+* Azure AI Studio offers multiple playgrounds with different parameter tuning options.
+	1. Completions playground - Allows you to make calls to your deployed models through a text-in, text-out interface and to adjust parameters. Completions Playground parameters
+		1. Temperature: Controls randomness. 
+			1. Lowering the temperature means that the model produces more repetitive and deterministic responses. 
+			1. Increasing the temperature results in more unexpected or creative responses. Try adjusting temperature or Top P but not both.
+		1. Max length (tokens): Set a limit on the number of tokens per model response. 
+			1. The API supports a maximum of 4000 tokens shared between the prompt (including system message, examples, message history, and user query) and the model's response. 
+			1. One token is roughly four characters for typical English text.
+		1. Stop sequences: Make responses stop at a desired point, such as the end of a sentence or list. 
+			1. Specify up to four sequences where the model will stop generating further tokens in a response. The returned text won't contain the stop sequence.
+		1. Top probabilities (Top P): Similar to temperature, this controls randomness but uses a different method. 
+			1. Lowering Top P narrows the model’s token selection to likelier tokens. 
+			1. Increasing Top P lets the model choose from tokens with both high and low likelihood. 
+			1. Try adjusting temperature or Top P but not both.
+		1. Frequency penalty: Reduce the chance of repeating a token proportionally based on how often it has appeared in the text so far. This decreases the likelihood of repeating the exact same text in a response.
+		1. Presence penalty: Reduce the chance of repeating any token that has appeared in the text at all so far. This increases the likelihood of introducing new topics in a response.
+		1. Pre-response text: Insert text after the user’s input and before the model’s response. This can help prepare the model for a response.
+		1. Post-response text: Insert text after the model’s generated response to encourage further user input, as when modeling a conversation.
+	1. Chat playground - Based on a conversation-in, message-out interface. You can initialize the session with a system message to set up the chat context.
+		1. Add few-shot examples - providing a few of examples to help the model learn what it needs to do. 
+		1. Zero-shot - providing no examples.
+		1. In the Assistant setup, you can provide few-shot examples of what the user input may be, and what the assistant response should be. The assistant tries to mimic the responses you include here in tone, rules, and format you've defined in your system message.
+<img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-chat-playground.png" height=500 width=500>
+		1. Chat playground parameters
+			1. Max response: Set a limit on the number of tokens (max 4000 tokens support) per model response. 
+			1. Past messages included: Select the number of past messages to include in each new API request. Including past messages helps give the model context for new user queries. Setting this number to 10 will include five user queries and five system responses.
 
-The way a prompt is engineered. Learn more about prompt engineering here.
-The model parameters (covered next)
-The data the model is trained on, which can be adapted through model fine-tuning with customization
-You have more control over the completions returned by training a custom model than through prompt engineering and parameter adjustment.
+## Knowledge check
+1. What Azure OpenAI base model can you deploy to access the capabilities of ChatGPT? 
+	1. text-davinci-003
+	1. gpt-35-turbo - Correct. Only the gpt-3.5-turbo and later models can be used to access the chat capabilities.
+	1. text-embedding-ada-002 (Version 2)
+2. Which parameter could you adjust to change the randomness or creativeness of the completions returned? 
+	1. Temperature - Correct. The temperature parameter can be adjusted to change the randomness or creativeness of the completions returned.
+	1. Frequency penalty
+	1. Stop sequence
+3. Which Azure AI Studio playground is able to support conversation-in, message-out scenarios? 
+	1. Images
+	1. Chat - Correct. The Chat playground is able to support conversation-in, message-out scenarios.
+	1. Bot
 
-Making calls
-You can start making calls to your deployed model via the REST API, Python, C#, or from the Studio. If your deployed model has a GPT-3.5 or GPT-4 model base, use the Chat completions documentation, which has different request endpoints and variables required than for other base models.
