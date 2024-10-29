@@ -30,7 +30,7 @@
   * Test, A prompt is the text portion of a request that is sent to the deployed model's completions endpoint. 
   * Responses are referred to as completions, which can come in form of text, code, or other formats.
   * Prompt types, Prompts can be grouped into types of requests based on task.
-  | Task type | Prompt example | Completion example |
+  * | Task type | Prompt example | Completion example |
   | Classifying content | Tweet: I enjoyed the trip. Sentiment: | Positive |
   | Generating new content | List ways of traveling | 1. Bike 2. Car ... |
   | Holding a conversation | A friendly AI assistant | See examples - ![](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/completions#conversation?portal=true) |
