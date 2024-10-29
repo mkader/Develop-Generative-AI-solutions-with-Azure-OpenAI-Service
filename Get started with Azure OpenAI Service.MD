@@ -35,11 +35,11 @@
 |-- |-- |--|  
 | Classifying content | Tweet: I enjoyed the trip. Sentiment: | Positive |
 | Generating new content | List ways of traveling | 1. Bike 2. Car ... |
-  	| Holding a conversation | A friendly AI assistant | <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/completions#conversation?portal=true">See examples</a> |
-  	| Transformation (translation and symbol conversion) English: Hello French: | bonjour |
-  	| Summarizing content | Provide a summary of the content {text} | The content shares methods of machine learning. |
-  	| Picking up where you left off | One way to grow tomatoes | is to plant seeds. |
-  	| Giving factual responses | How many moons does Earth have? | One |
+| Holding a conversation | A friendly AI assistant | <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/completions#conversation?portal=true">See examples</a> |
+| Transformation (translation and symbol conversion) English: Hello French: | bonjour |
+| Summarizing content | Provide a summary of the content {text} | The content shares methods of machine learning. |
+| Picking up where you left off | One way to grow tomatoes | is to plant seeds. |
+| Giving factual responses | How many moons does Earth have? | One |
 
 Completion quality
 Several factors affect the quality of completions you'll get from a generative AI solution.
