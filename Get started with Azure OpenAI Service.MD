@@ -7,7 +7,7 @@
 ## Use Azure AI Studio -  https://ai.azure.com/
   * Azure AI Studio provides access to model management, deployment, experimentation, customization, and learning resources.
 	* Select your resource, deploy your first model through the Deployments page
-	* <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deployment.png" width=200 height=200>
+	* <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deployment.png" width=500 height=500>
 
 ## Explore types of generative AI models
 	* MS provides base models and the option to create customized base models. This module covers the currently available base models.
@@ -21,7 +21,7 @@
 ## Deploy generative AI models
 	* Deploy a model to chat with or make API calls to receive responses to prompts.
 	* Depoy using Azure AI Studio
-	* ![](https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deploy-model.png)
+	* <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deploy-model.png" width=500 height=500>
 	* Deploy using Azure CLI
 		1. az cognitiveservices account deployment create -g OAIResourceGroup -n MyOpenAIResource --deployment-name MyModel --model-name gpt-35-turbo --model-version "0301"  --model-format OpenAI --sku-name "Standard" --sku-capacity 1
 	* Deploy using the REST API - https://learn.microsoft.com/en-us/azure/ai-services/openai/
@@ -31,7 +31,8 @@
   * Responses are referred to as completions, which can come in form of text, code, or other formats.
   * Prompt types, Prompts can be grouped into types of requests based on task.
   
-	| Task type | Prompt example | Completion example |
+		| Task type | Prompt example | Completion example |
+    |-- |-- |--|  
   	| Classifying content | Tweet: I enjoyed the trip. Sentiment: | Positive |
   	| Generating new content | List ways of traveling | 1. Bike 2. Car ... |
   	| Holding a conversation | A friendly AI assistant | <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/completions#conversation?portal=true">See examples</a> |
