@@ -7,7 +7,7 @@
 ## Use Azure AI Studio -  https://ai.azure.com/
   * Azure AI Studio provides access to model management, deployment, experimentation, customization, and learning resources.
 	* Select your resource, deploy your first model through the Deployments page
-	* ![](https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deployment.png)
+	* <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-deployment.png" width=200 height=200>
 
 ## Explore types of generative AI models
 	* MS provides base models and the option to create customized base models. This module covers the currently available base models.
