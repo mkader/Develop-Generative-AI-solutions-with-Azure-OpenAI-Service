@@ -65,7 +65,7 @@
 		1. Add few-shot examples - providing a few of examples to help the model learn what it needs to do. 
 		1. Zero-shot - providing no examples.
 		1. In the Assistant setup, you can provide few-shot examples of what the user input may be, and what the assistant response should be. The assistant tries to mimic the responses you include here in tone, rules, and format you've defined in your system message.
-<img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-chat-playground.png" height=500 width=500>
+		1. <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-openai/media/studio-chat-playground.png" height=500 width=500>
 		1. Chat playground parameters
 			1. Max response: Set a limit on the number of tokens (max 4000 tokens support) per model response. 
 			1. Past messages included: Select the number of past messages to include in each new API request. Including past messages helps give the model context for new user queries. Setting this number to 10 will include five user queries and five system responses.
@@ -84,3 +84,18 @@
 	1. Chat - Correct. The Chat playground is able to support conversation-in, message-out scenarios.
 	1. Bot
 
+## Lab - https://microsoftlearning.github.io/mslearn-openai/Instructions/Exercises/01-get-started-azure-openai.html
+1. Provision an Azure OpenAI resource. Create an Azure OpenAI resource: Pricing tier: Standard S0
+1. Deploy a model
+	1. Azure portal -> Azure OpenAI resource -> Overview page -> select the button to go to AI Studio. (scroll down)
+	1. Azure AI Studio -> Deployments page and view your existing model deployments -> if not, create a new deployment of the gpt-35-turbo-16k -> Deployment type: Standard
+1. Use the Chat playground
+	1. Configuration - used to select your deployment, define system message, and set parameters for interacting with your deployment.
+	1. Chat session - used to submit chat messages and view responses.
+	1. Under Deployments, ensure that your gpt-35-turbo-16k model deployment is selected.
+	1. Review the default System message, which should be You are an AI assistant that helps people find information. The system message is included in prompts submitted to the model, and provides context for the model’s responses; setting expectations about how an AI agent based on the model should interact with the user.
+1. Experiment with system messages, prompts, and few-shot examples
+	1.select the Prompt samples, and use the Marketing Writing Assistant prompt template.
+	1. Review the new system message, which describes how an AI agent should use the model to respond.
+1. Experiment with parameters. Configuration (Parameters tab) panel -> set the following parameter values: Max response: 1000, Temperature: 1
+1. Deploy your model to a web app - Pricing plan: Free (F1) - If this is not available, select Basic (B1). Enable chat history in the web app: Unselected
